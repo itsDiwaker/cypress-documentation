@@ -179,6 +179,10 @@ Configure `baseUrl` in the `cypress.json` file to prevent repeating yourself in 
 }
 ```
 
+{% note info %}
+Note that in case `baseUrl` is not configured in your {% url 'network options' configuration#Global %}, cypress will reload test on each `cy.visit()` that it encounters. Please read more in our {% url 'best practices' best-practices#Setting-a-global-baseUrl %}
+{% endnote %}
+
 ```javascript
 cy.visit('dashboard') // Visits http://localhost:3000/#/dashboard
 ```
